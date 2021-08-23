@@ -86,9 +86,9 @@ function DoHeading    # Always use this function to prepare the screen
     GlobalCursorRow=1
 } # End DoHeading
 
-function DoForm    # Centred prompt for user-entry
-{   # $1 Text for prompt
-    # Returns user entry through $GlobalInt
+function DoForm   # Centred prompt for user-entry
+{                 # $1 Text for prompt
+                  # Returns user entry through $GlobalChar
 
     local winwidth length startpoint empty
 
@@ -97,7 +97,7 @@ function DoForm    # Centred prompt for user-entry
     if [ ${length} -le ${winwidth} ]; then
         startpoint=$(( (winwidth - length) / 2 ))
     else
-        startpoint=0
+        startpoint=1
     fi
     tput cup $GlobalCursorRow $startpoint                     # Move cursor to startpoint
     read -p "$1" GlobalChar
@@ -105,7 +105,7 @@ function DoForm    # Centred prompt for user-entry
 
 function DoMessage    # Display an error message in a pop-up terminal
 {                     # $1 and $2 optional lines of message text
-    xterm -T " Error" -geometry 90x10+300+250 -fa monospace -fs 10 -e "echo '$1' && echo '$2' && read -p 'Please press [Enter] ...'"
+    xterm -T " Information" -geometry 90x10+300+250 -fa monospace -fs 10 -e "echo '$1' && echo '$2' && read -p 'Please press [Enter] ...'"
 } # End DoMessage
 
 function PrintButtons
