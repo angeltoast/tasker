@@ -14,14 +14,7 @@ Functions to add, edit and delete records are started but incomplete.
 25 August 2021
 Tasker uses the Lister suite of functions to make console applications
 more pleasing to the eye than plain Bash output. A copy of lister.sh is
-included in the repository, with a simple reference guide.
-
-Please note:
-As of 2021/08/25 the copy of lister.sh shipped with Tasker differs from
-other versions, including that in the Lister project repository. This
-revision has been given the version number 2.00 as changes make it
-incompatible with applications using previous editions. Version 2.00
-will be ported to all other applications over the next few days, as I
-identify any areas of friction.
+included in the repo, with a simple reference guide. As of 25 August
+2021 Tasker has been written to use the new version 2.00 of Lister.
 Elizabeth Mills
 25 August 2021
